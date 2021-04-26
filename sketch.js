@@ -57,16 +57,16 @@ function setup() {
   engine = Engine.create();
   world = engine.world;
 
-  ocean=new Ocean(displayWidth/2, displayHeight-150,displayWidth,displayHeight/2)
+  ocean=new Ocean(windowWidth/2, windowHeight-150,windowWidth,windowHeight/2)
 
-  startingGround=new Ground(displayWidth/2, displayHeight/2 ,400,40);
-  player=new Bird(displayWidth/2, displayHeight/3, 50)
+  startingGround=new Ground(windowWidth/2, windowHeight/2 ,400,40);
+  player=new Bird(windowWidth/2, windowHeight/3, 50)
 // console.log(startingGround);
 // console.log(player.body.position.y)
 
 y=startingGround.body.position.y-35;
 // console.log("y"+y);
-// console.log("displayHeight:;"+displayHeight);
+// console.log("windowHeight:;"+windowHeight);
 //block=new Blocks(270,231,100,30);
 
 console.log(startingGround.body.position.x)
@@ -74,7 +74,7 @@ console.log(startingGround.body.position.x)
 
 function draw() {
   background(Background_png);  
-  image(Background_png,displayWidth/2 ,displayHeight/2,displayWidth, displayHeight)
+  image(Background_png,windowWidth/2 ,windowHeight/2,windowWidth, windowHeight)
   Engine.update(engine);
   var startingGroundPos=startingGround.body.position; 
 
@@ -93,7 +93,7 @@ input.position(200,300)
   }
 
   if(gameState === 1){
-    image(Background_png,displayWidth/2 ,displayHeight/2,displayWidth, displayHeight)
+    image(Background_png,windowWidth/2 ,windowHeight/2,windowWidth, windowHeight)
   if(player.body.position.x>startingGroundPos.x+200||player.body.position.x<startingGroundPos.x-200){
     text("GAME OVER,",382,167);
   }
