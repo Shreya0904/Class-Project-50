@@ -51,7 +51,7 @@ sounds_jumping_sound_1=loadSound("Sounds/sounds_jumping_sound_1.ogg")
 
 
 function setup() {
-  createCanvas(displayWidth, displayHeight);
+  createCanvas(windowWidth, windowHeight);
   button = createButton('PLAY')
   input = createInput();
   engine = Engine.create();
